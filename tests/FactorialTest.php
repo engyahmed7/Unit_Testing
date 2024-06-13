@@ -12,6 +12,7 @@ class FactorialTest extends TestCase
         $factorial = new Factorial();
         $this->assertEquals(1, $factorial->calculate(0));
     }
+
     public function testFactorialOfOneShouldBeOne()
     {
         $factorial = new Factorial();
@@ -23,7 +24,7 @@ class FactorialTest extends TestCase
         $factorial = new Factorial();
         $this->assertEquals(120, $factorial->calculate(5));
     }
-
+    
     public function testFactorialGt3()
     {
         $randomNumber = rand(3, 99999);
@@ -31,10 +32,16 @@ class FactorialTest extends TestCase
         $this->assertEquals($factorial->calculate($randomNumber), $factorial->calculate($randomNumber - 1) * $randomNumber);
     }
 
-    public function testFactorialOfFiveShouldBeNeg3()
+    public function testFactorialOfNegThreeShouldBeNull()
     {
         $factorial = new Factorial();
         $this->assertEquals(null, $factorial->calculate(-3));
+    }
+
+    public function testFactorialOFOneAndHalfShouldBeNull()
+    {
+        $factorial = new Factorial();
+        $this->assertEquals(null, $factorial->calculate(1.5));
     }
 
     public function testFactorialOfFalseShouldBeNull()
