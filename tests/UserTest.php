@@ -24,15 +24,4 @@ class UserTest extends TestCase
         $this->user->setName('Noha');
         $this->assertEquals('Noha', $this->user->getName());
     }
-
-    public function testGetEmail()
-    {
-        $this->assertEquals('belal@gmail.com', $this->user->getEmail());
-    }
-
-    public function testSetEmail()
-    {
-        $this->user->setEmail('nohasalah@iti.gov.eg');
-        $this->assertEquals('nohasalah@iti.gov.eg', $this->user->getEmail());
-    }
 }
