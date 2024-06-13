@@ -36,4 +36,16 @@ class FactorialTest extends TestCase
         $factorial = new Factorial();
         $this->assertEquals(null, $factorial->calculate(-3));
     }
+
+    public function testFactorialOfFalseShouldBeNull()
+    {
+        $factorial = new Factorial();
+        $this->assertEquals(null, $factorial->calculate(false));
+    }
+
+    public function testFactorialOfABCShouldBeNull()
+    {
+        $factorial = new Factorial();
+        $this->assertEquals(null, $factorial->calculate('abc'));
+    }
 }
