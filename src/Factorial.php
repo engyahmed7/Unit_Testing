@@ -14,4 +14,3 @@ class Factorial
         return $number * $this->calculate($number - 1);
     }
 }
-
